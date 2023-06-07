@@ -11,7 +11,7 @@ const getProduct = async(req,res) => {
         if(!data){
             res.status(404).send('some error occured')
         }
-        res.status(200).send(data)
+        return res.status(200).send(data)
     } catch (error) {
         res.status(400).send(error.message)
     }

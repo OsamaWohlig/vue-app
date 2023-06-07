@@ -14,7 +14,7 @@ const uploadImage = async(req,res) => {
         const downloadRef = await getDownloadURL(check.ref)
         if(!downloadRef) return res.send('error')
         const data = {
-            downloadurl:downloadRef,
+            downloadUrl:downloadRef,
             imageData:req.body.imageData,
             imagePath:`/test-images/${uniqueId}`
         }
